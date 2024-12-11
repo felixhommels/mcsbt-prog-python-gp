@@ -3,6 +3,9 @@ from rapidfuzz import process
 import investor
 import market
 import visualizer
+import warnings
+
+warnings.filterwarnings("ignore")
 
 def create_exports_directory():
     # Check if the "Exports" directory exists
