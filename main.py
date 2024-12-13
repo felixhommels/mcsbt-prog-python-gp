@@ -126,7 +126,7 @@ def main():
                 "1. How are the scores computed?\n"
                 "Scores for investors are computed based on the number of investments and exits. The more investments and exits, the higher the score.\n"
                 "Scores for companies are computed based on the investor score, funding difference score and market context score. The higher the score, the better the company. Scores are normalized to a range of 0 to 1.\n"
-                "2. How are the best companies found=\n"
+                "2. How are the best companies found?\n"
                 "Best companies are found based on a formula which is a weighted sum of investor score, funding difference score and market context score. The weights are defined by the user.\n"
                 "3. How are the top 20 investors found?\n"
                 "Top 20 investors are found based on the number of investments and exits. The more investments and exits, the higher the score. The top 20 investors are then sorted by their score and the top 20 are returned.\n"
