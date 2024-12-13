@@ -20,6 +20,7 @@ def investor_data_frame(file1='InputData/EU_Investors.csv', file2='InputData/US_
     combined_investor_data = pd.concat([eu_investors, us_investors])
     combined_investor_data['Region'] = ['EU'] * len(eu_investors) + ['US'] * len(us_investors)
 
+    #Using list comprehension and polymorphism to calculate the score for each investor and save it in the dataframe
     investors = [
         Investor(
             name=row['Organization/Person Name'],
@@ -29,7 +30,6 @@ def investor_data_frame(file1='InputData/EU_Investors.csv', file2='InputData/US_
         for i, row in combined_investor_data.iterrows()
     ]
 
-    #Using list comprehension and polymorphism to calculate the score for each investor and save it in the dataframe
     combined_investor_data['Score'] = [inv.calculate_score() for inv in investors] 
 
     return combined_investor_data
